@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index(Request $request)
     {
-        $students = Student::with('assignedTask')->filter($request)->paginate(10);
+        $students = Student::with('assignedTask.task.category')->filter($request)->paginate(10);
         return $students;
     }
 

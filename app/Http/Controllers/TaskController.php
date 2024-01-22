@@ -15,7 +15,7 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        $tasks = Task::with('category','assignedTask')->filter($request)->paginate(10);
+        $tasks = Task::with('category','assignedTask.student')->filter($request)->paginate(10);
         return $tasks;
     }
 
