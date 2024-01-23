@@ -19,7 +19,7 @@ class Student extends Model
 
     public function assignedTask()
     {
-        return $this->hasMany(Assigned_task::class,'student_id','id');
+        return $this->belongsTo(Assigned_task::class,'student_id','id');
     }
 
     public function scopeFilter($query, $request)

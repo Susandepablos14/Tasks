@@ -15,7 +15,7 @@ class Category extends Model
 
     public function task()
     {
-        return $this->hasMany(task::class,'category_id','id');
+        return $this->belongsTo(task::class,'category_id','id');
     }
 
     public function scopeFilter($query, $request)

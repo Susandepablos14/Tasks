@@ -18,7 +18,7 @@ class Task extends Model
 
     public function assignedTask()
     {
-        return $this->hasMany(Assigned_task::class,'task_id','id');
+        return $this->belongsTo(Assigned_task::class,'task_id','id');
     }
 
     public function category()
