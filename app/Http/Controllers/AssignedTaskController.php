@@ -85,7 +85,7 @@ class AssignedTaskController extends Controller
 
         if ($completed) {
             return 'La tarea ya fue completada';
-        } elseif ($now < $deadline) {
+        } elseif ($now <= $deadline) {
                 $assigned_task->completed = $request->completed ?? $assigned_task->completed;
                 $assigned_task->save();
                 return 'La tarea ha sido actualizada';
