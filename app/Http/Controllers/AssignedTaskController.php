@@ -53,7 +53,7 @@ class AssignedTaskController extends Controller
         $assigned_task->student_id = $request->student_id ?? $assigned_task->student_id;
         $assigned_task->task_id = $request->task_id ?? $assigned_task->task_id;
         $assigned_task->completed = $request->completed ?? $assigned_task->completed;
-        $assigned_task->deadline = $request->deadline ?? $assigned_task->completed;
+        $assigned_task->deadline = $request->deadline ?? $assigned_task->deadline;
 
         $assigned_task->save();
         return 'success';
