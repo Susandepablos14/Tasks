@@ -46,8 +46,8 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $category->name = $request->name ?? $category->name;
-
         $category->save();
+
         return 'success';
     }
 
